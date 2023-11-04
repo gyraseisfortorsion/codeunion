@@ -22,7 +22,7 @@ class CurrencyList(generics.ListAPIView):
             page = int(page)
 
         if per_page is None:
-            per_page = 10  # Set a default value for per_page
+            per_page = 40  # Set a default value for per_page
         else:
             per_page = int(per_page)
 

@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-j7vk0hnwx70jkmxqoyly*7e_wz34^yp!8-xc&t6r@-=@+!f$!5
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "codeunion-flame.vercel.app"
+    "codeunion-flame.vercel.app",
+    "127.0.0.1"
 ]
 
 
