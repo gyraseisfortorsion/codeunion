@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-j7vk0hnwx70jkmxqoyly*7e_wz34^yp!8-xc&t6r@-=@+!f$!5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "codeunion-flame.vercel.app"
+]
 
 
 # Application definition
