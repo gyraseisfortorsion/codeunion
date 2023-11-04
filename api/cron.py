@@ -4,7 +4,7 @@ from api.models import Currency
 import logging
 
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 def update_currency_rates():
     url = 'http://www.nationalbank.kz/rss/rates_all.xml'
     response = requests.get(url)
@@ -19,10 +19,10 @@ def update_currency_rates():
                 if not created:
                     currency.rate = rate
                     currency.save()
-                logger.info('Currency rates updated successfully.')
+                # logger.info('Currency rates updated successfully.')
                 print(f'Currency {name} updated successfully.')
             else:
-                logger.error(f'Failed to retrieve data from {url}')
+                # logger.error(f'Failed to retrieve data from {url}')
                 print(f'Failed to parse rate for currency {name}.')
     else:
         print(f'Failed to retrieve data from {url}')

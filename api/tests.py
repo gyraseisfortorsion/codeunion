@@ -7,6 +7,7 @@ from api.models import Currency
 class CurrencyTests(APITestCase):
     def setUp(self):
         self.currency = Currency.objects.create(name='USD', rate=500)
+        self.currency = Currency.objects.create(name='EUR', rate=550)
 
     def test_get_currency_list(self):
         url = reverse('currency-list')
@@ -15,6 +16,7 @@ class CurrencyTests(APITestCase):
 
     def test_get_currency_detail(self):
         url = reverse('currency-detail', kwargs={'pk': self.currency.pk})
+        print(url)
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['name'], self.currency.name)
