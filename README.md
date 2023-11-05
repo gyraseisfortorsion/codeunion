@@ -26,7 +26,7 @@ python manage.py runcron
 ### 3. Консольная команда:
 
 ```
-python manage.py python manage.py update_currency <currency_id> <value>
+python manage.py update_currency <currency_id> <value>
 ```
 Пример использования:
 ```
