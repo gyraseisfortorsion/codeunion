@@ -20,9 +20,9 @@ def update_currency_rates():
                     currency.rate = rate
                     currency.save()
                 # logger.info('Currency rates updated successfully.')
-                print(f'Currency {name} updated successfully.')
-            else:
+                # print(f'Currency {name} updated successfully.')
+            # else:
                 # logger.error(f'Failed to retrieve data from {url}')
-                print(f'Failed to parse rate for currency {name}.')
-    else:
-        print(f'Failed to retrieve data from {url}')
+                # print(f'Failed to parse rate for currency {name}.')
+    # else:
+    #     print(f'Failed to retrieve data from {url}')

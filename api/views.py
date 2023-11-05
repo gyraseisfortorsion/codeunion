@@ -10,8 +10,9 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 
 class CurrencyList(generics.ListAPIView):
     serializer_class = CurrencySerializer
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticated]
+    # authentication_classes = [TokenAuthentication]
+    # @api_view(['GET'])
+    permission_classes = (IsAuthenticated,)
     def get_queryset(self):
         page = self.request.query_params.get('page')
         per_page = self.request.query_params.get('per_page')
@@ -30,7 +31,8 @@ class CurrencyList(generics.ListAPIView):
         return queryset[page * per_page: (page + 1) * per_page]
 
 class CurrencyDetail(generics.RetrieveAPIView):
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [TokenAuthentication]
+    permission_classes = (IsAuthenticated,)
+    # authentication_classes = [TokenAuthentication]
     queryset = Currency.objects.all()
     serializer_class = CurrencySerializer
+
