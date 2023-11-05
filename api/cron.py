@@ -26,3 +26,4 @@ def update_currency_rates():
                 # print(f'Failed to parse rate for currency {name}.')
     # else:
     #     print(f'Failed to retrieve data from {url}')
+# убрал логгер и принты потому что мусорят

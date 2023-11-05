@@ -16,6 +16,6 @@ class Command(BaseCommand):
             currency = Currency.objects.get(id=currency_id)
             currency.rate = rate
             currency.save()
-            self.stdout.write(self.style.SUCCESS(f'Successfully updated currency with ID {currency_id}'))
+            self.stdout.write(self.style.SUCCESS("Successfully updated currency"))
         except Currency.DoesNotExist:
             self.stdout.write(self.style.ERROR(f'Currency with ID {currency_id} does not exist'))
