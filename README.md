@@ -70,5 +70,6 @@ python manage.py test
 pip install -r requirements.txt
 ```
 Далее просто запускаете сервер
-
+```
 python manage.py runserver
+```
