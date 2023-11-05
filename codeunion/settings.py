@@ -70,7 +70,7 @@ SIMPLE_JWT = {
 
 
 CRONJOBS = [
-    ('*/1 * * * *', 'api.cron.update_currency_rates')
+    ('*/5 * * * *', 'api.cron.update_currency_rates')
 ]
 
 MIDDLEWARE = [
