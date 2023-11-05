@@ -72,6 +72,8 @@ python manage.py test
 ```
 pip install -r requirements.txt
 ```
+
+Если будет выходить ошибка с pcycopg2, то замените psycopg-binary на просто psycopg в requirements.txt
 Далее просто запускаете сервер
 ```
 python manage.py runserver
